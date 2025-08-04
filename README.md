@@ -21,19 +21,19 @@ Fitur:
 
 ---
 
-## 🧰 Prasyarat
+## 🧰 Prerequisite
 
 Sebelum mulai, kamu perlu:
 
 1. AWS Account aktif
-2. 1x EC2 instance Ubuntu (region ap-southeast-3)
-3. 1x RDS PostgreSQL instance (region ap-southeast-3)
-4. 1x S3 bucket (region ap-southeast-3)
-5. 1x GitHub repo (clone dari sini)
+2. EC2 instance Ubuntu (region ap-southeast-3)
+3. RDS PostgreSQL instance (region ap-southeast-3)
+4. S3 bucket (region ap-southeast-3)
+5. GitHub repo (clone dari sini)
 
 ---
 
-## ☁️ Setup Layanan AWS
+## ☁️ Setup AWS
 
 ### 🔹 1. Setup IAM Role untuk EC2 (Akses ke S3)
 
@@ -49,7 +49,7 @@ Sebelum mulai, kamu perlu:
 5. Klik **Next**, beri nama: `FlaskS3AccessRole`
 6. Klik **Create role**
 
-#### Cara Attach IAM Role ke EC2:
+#### Attach IAM Role ke EC2:
 
 1. Buka **EC2 Dashboard**
 2. Pilih instance kamu
@@ -137,7 +137,7 @@ Masuk ke repo kamu → Settings → Secrets → Actions → Tambahkan:
 | `RDS_USER`          | Username RDS                  |
 | `RDS_PASSWORD`      | Password RDS                  |
 | `S3_BUCKET_NAME`    | Nama bucket                   |
-| `FLASK_SECRET_KEY`  | Random String Aja             |
+| `FLASK_SECRET_KEY`  | Random String apa aja bebazzz |
 
 ---
 
@@ -211,34 +211,23 @@ Repositori ini untuk latihan AWS + Flask.
 
 ---
 
-## 🚧 Cara Pakai Project Ini (untuk Pengguna Lain)
+## 🚧 Cara Pakai Project Ini
 
 Kalau kamu ingin menggunakan project ini dari public repository:
 
-1. **Fork atau Clone Repo ini**
+1. **Clone Repo ini**
 ```bash
 git clone https://github.com/frhnardigit/flaskapp.git
 cd flaskapp
 ```
 
 2. **Buat Repository GitHub sendiri** (jika belum punya)
-   - Push project ini ke repo kamu sendiri:
+   - Push project ini ke repo ente diri:
      ```bash
      git remote set-url origin git@github.com:usernamekamu/nama-repo.git
      git push -u origin main
      ```
 
-3. **Buat EC2, RDS, dan S3 kamu sendiri**
-   - Pastikan semua layanan di region `ap-southeast-3`
-
-4. **Tambahkan GitHub Secrets** di repo kamu:
-   - `EC2_HOST`, `EC2_SSH_KEY`, `RDS_HOST`, dll (lihat tabel di atas)
-
-5. **Set IAM Role ke EC2 instance**
-   - Supaya bisa akses S3 tanpa credentials
-
 6. **Push ke `main` → aplikasi otomatis ter-deploy ke EC2** 🎉
 
 ---
-
-✅ Siap! Kamu dan teman-temanmu bisa langsung cloning dan deploy ulang ke infrastruktur masing-masing.
