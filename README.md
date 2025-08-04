@@ -1,4 +1,4 @@
-# 🌐 Aplikasi Flask Sederhana – AWS RDS + S3 + EC2 (Region: ap-southeast-3) + GitHub Actions
+# 🌐 Aplikasi Flask Sederhana – AWS RDS + S3 + EC2  GitHub Actions
 
 Aplikasi web sederhana berbasis **Flask** untuk pembelajaran AWS.  
 Fitur:
@@ -23,7 +23,7 @@ Fitur:
 
 ## 🧰 Prerequisite
 
-Sebelum mulai, kamu perlu:
+Sebelum mulai, ente perlu:
 
 1. AWS Account aktif
 2. EC2 instance Ubuntu (region ap-southeast-3)
@@ -52,7 +52,7 @@ Sebelum mulai, kamu perlu:
 #### Attach IAM Role ke EC2:
 
 1. Buka **EC2 Dashboard**
-2. Pilih instance kamu
+2. Pilih instance ente
 3. Klik **Actions > Security > Modify IAM Role**
 4. Pilih `FlaskS3AccessRole`
 5. Klik **Update IAM Role**
@@ -73,7 +73,7 @@ Sebelum mulai, kamu perlu:
 4. Catat endpoint, username, dan password
 5. Tambahkan rule di security group:
    - Port: `5432`
-   - Source: IP EC2 kamu
+   - Source: IP EC2 ente
 
 #### Buat DB Baru & Tabel
 
@@ -126,11 +126,11 @@ CREATE TABLE users (
 
 ### 🔐 Tambahkan GitHub Secrets
 
-Masuk ke repo kamu → Settings → Secrets → Actions → Tambahkan:
+Masuk ke repo ente → Settings → Secrets → Actions → Tambahkan:
 
 | Secret Name         | Deskripsi                     |
 |---------------------|-------------------------------|
-| `EC2_HOST`          | IP address EC2 kamu           |
+| `EC2_HOST`          | IP address EC2 ente           |
 | `EC2_SSH_KEY`       | Private key `.pem`            |
 | `RDS_HOST`          | Endpoint RDS                  |
 | `RDS_DB_NAME`       | Nama database (`flask_app`)   |
@@ -224,7 +224,7 @@ cd flaskapp
 2. **Buat Repository GitHub sendiri** (jika belum punya)
    - Push project ini ke repo ente diri:
      ```bash
-     git remote set-url origin git@github.com:usernamekamu/nama-repo.git
+     git remote set-url origin git@github.com:usernameente/nama-repo.git
      git push -u origin main
      ```
 
